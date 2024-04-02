@@ -28,12 +28,19 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
    ```
 
 - go to the `ui` folder and choose or create new folder component, then paste your ``your-component.tsx`` inside the folder that you choosen
-
-   ![Folder structure](https://raw.githubusercontent.com/Taufik-H/neubeam/main/public/folder.png)
-
+  ```
+  ui/
+  ├── alert/
+  │   └── SimpleAlert.tsx
+  ├── button/
+  │   
+  ├── card/
+  │   
+  └── form/
+  ```
  - import your component in `constant/component.tsx`
 
- ```tsx
+  ```tsx
 //  constant/components.tsx
 
  const components = [
@@ -52,7 +59,7 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
     ],
   },
   {...}
- ```
+  ```
 ### Support Neubeam ❤️
 
 If you find Neubeam useful and would like to support its development, consider sponsoring the project on GitHub.
