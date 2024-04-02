@@ -15,10 +15,44 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
 
 3. **Submit Pull Requests**: Contributions are welcome! If you have developed a new feature, fixed a bug, or improved existing code, submit a pull request with your changes.
 
-   ![Contribute](https://via.placeholder.com/200x50)
+ 
 
-4. **Spread the Word**: Help spread the word about Neubeam by sharing it with your friends and colleagues or by giving it a star on GitHub.
+4. **Add new Components**: Follow the steps bellow
+- Clone this repo 
+   ```bash
+   git clone https://github.com/Taufik-H/neubeam.git
+   ```
+- Go to the Projects
+   ```bash
+   cd neubeam
+   ```
 
+- go to the `ui` folder and choose or create new folder component, then paste your ``your-component.tsx`` inside the folder that you choosen
+
+   [![Folder structure](https://via.placeholder.com/500x100)](https://github.com/sponsors/your_username)
+
+ - import your component in `constant/component.tsx`
+
+ ```tsx
+//  constant/components.tsx
+
+ const components = [
+  {
+    link: "/alert", //create new if you have the new one                      
+    name: "Alert",
+    style: [
+      {
+        name: "simple alert",
+        componentCode: <UISimpleAlert />,
+      },
+      {
+        name: "rounded alert",
+        componentCode: <RoundedAlert />,
+      },
+    ],
+  },
+  {...}
+ ```
 ### Support Neubeam
 
 If you find Neubeam useful and would like to support its development, consider sponsoring the project on GitHub.
