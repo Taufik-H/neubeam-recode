@@ -29,7 +29,7 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
 
 - go to the `ui` folder and choose or create new folder component, then paste your ``your-component.tsx`` inside the folder that you choosen
 
-   [![Folder structure](https://via.placeholder.com/500x100)](https://github.com/sponsors/your_username)
+   ![Folder structure](https://raw.githubusercontent.com/Taufik-H/neubeam/main/public/folder.png)
 
  - import your component in `constant/component.tsx`
 
@@ -53,12 +53,12 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
   },
   {...}
  ```
-### Support Neubeam
+### Support Neubeam ❤️
 
 If you find Neubeam useful and would like to support its development, consider sponsoring the project on GitHub.
 
-[![Sponsor](https://via.placeholder.com/200x50)](https://github.com/sponsors/your_username)
+<a href="https://www.buymeacoffee.com/opik" target="_blank"><img src="https://cdn.buymeacoffee.com/buttons/v2/default-green.png" alt="Buy Me A Coffee" style="height: 50px !important;width: 217px !important;" ></a>
 
 ---
 
-Thank you for considering contributing to Neubeam! Your support is greatly appreciated.
+Thank you for considering contributing to Neubeam! Your support is greatly appreciated 🤝.
