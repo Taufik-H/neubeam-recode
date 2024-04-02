@@ -58,7 +58,7 @@ Contributing to Neubeam is greatly appreciated! Here are some ways you can contr
       },
     ],
   },
-  {...}
+  {...}]
   ```
 ### Support Neubeam ❤️
 
