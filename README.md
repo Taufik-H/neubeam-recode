@@ -1,6 +1,6 @@
 ## Neubeam
 
-![Neubeam Preview](https://drive.google.com/file/d/1iSGX1GhGXfMrvuu81RkMFrW4gA_SNwjc/view?usp=sharing)
+![Neubeam Preview](https://raw.githubusercontent.com/Taufik-H/neubeam/main/public/bg.png)
 
 ### Description
 
