@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Analytics } from "@vercel/analytics/react"
 import "./globals.css";
 import { Navbar, Footer } from "@/components/sections";
 import "prismjs/themes/prism-tomorrow.css";
@@ -15,6 +16,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body>
+        <Analytics />
         <Navbar />
         <main>{children}</main>
         <Footer />

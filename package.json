@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@vercel/analytics": "^1.2.2",
     "html": "^1.0.0",
     "next": "14.0.3",
     "prismjs": "^1.29.0",
