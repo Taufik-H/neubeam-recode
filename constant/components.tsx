@@ -10,6 +10,8 @@ import CardImageFull from "@/ui/card/card-image-full";
 import SimpleForm from "@/ui/form/simple-form";
 import FormIcon from "@/ui/form/form-icon";
 
+import SimpleAvatar from "@/ui/avatar/simple-avatar";
+
 const components = [
   {
     link: "/alert",
@@ -22,6 +24,16 @@ const components = [
       {
         name: "rounded alert",
         componentCode: <RoundedAlert />,
+      },
+    ],
+  },
+  {
+    link: "/avatar",
+    name: "Avatar",
+    style: [
+      {
+        name: "simple avatar",
+        componentCode: <SimpleAvatar />,
       },
     ],
   },
