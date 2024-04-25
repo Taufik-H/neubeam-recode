@@ -12,6 +12,8 @@ import FormIcon from "@/ui/form/form-icon";
 
 import SimpleAvatar from "@/ui/avatar/simple-avatar";
 
+import TextAreas from "@/ui/textareas/textareas";
+
 const components = [
   {
     link: "/alert",
@@ -76,6 +78,16 @@ const components = [
       {
         name: "Form with icon",
         componentCode: <FormIcon />,
+      },
+    ],
+  },
+  {
+    link: "/textareas",
+    name: "Textareas",
+    style: [
+      {
+        name: "Textareas with action & avatar",
+        componentCode: <TextAreas/>,
       },
     ],
   },
