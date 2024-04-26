@@ -10,11 +10,13 @@
   },
   "dependencies": {
     "@vercel/analytics": "^1.2.2",
+    "fs": "^0.0.1-security",
     "html": "^1.0.0",
     "next": "14.0.3",
     "prismjs": "^1.29.0",
     "react": "^18",
-    "react-dom": "^18"
+    "react-dom": "^18",
+    "uuid": "^9.0.1"
   },
   "devDependencies": {
     "@types/html": "^1.0.4",
