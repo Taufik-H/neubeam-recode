@@ -1,30 +1,25 @@
 import UISimpleAlert from "@/ui/alert/UiSimpleAlert";
-
 import RoundedAlert from "@/ui/alert/rounded-alert";
 import ButtonGroup from "@/ui/button/button-group";
 import SimpleCard from "@/ui/card/simple-card";
-
 import ButtonToggle from "@/ui/button/button-toggle";
 import CardImageFull from "@/ui/card/card-image-full";
-
 import SimpleForm from "@/ui/form/simple-form";
 import FormIcon from "@/ui/form/form-icon";
-
 import SimpleAvatar from "@/ui/avatar/simple-avatar";
-
 import TextAreas from "@/ui/textareas/textareas";
-
+import BreadcrumbSimple from "@/ui/breadcrumb/breadcrumb-simple";
 const components = [
   {
     link: "/alert",
     name: "Alert",
     style: [
       {
-        name: "simple alert",
+        name: "Simple alert",
         componentCode: <UISimpleAlert />,
       },
       {
-        name: "rounded alert",
+        name: "Rounded alert",
         componentCode: <RoundedAlert />,
       },
     ],
@@ -34,7 +29,7 @@ const components = [
     name: "Avatar",
     style: [
       {
-        name: "simple avatar",
+        name: "Simple avatar",
         componentCode: <SimpleAvatar />,
       },
     ],
@@ -58,11 +53,11 @@ const components = [
     name: "Card",
     style: [
       {
-        name: "Simple Card",
+        name: "Simple card",
         componentCode: <SimpleCard />,
       },
       {
-        name: " Full image Card",
+        name: "Full image card",
         componentCode: <CardImageFull />,
       },
     ],
@@ -87,7 +82,17 @@ const components = [
     style: [
       {
         name: "Textareas with action & avatar",
-        componentCode: <TextAreas/>,
+        componentCode: <TextAreas />,
+      },
+    ],
+  },
+  {
+    link: "/breadcrumb",
+    name: "Breadcrumb",
+    style: [
+      {
+        name: "Breadcrumb simple",
+        componentCode: <BreadcrumbSimple />,
       },
     ],
   },
