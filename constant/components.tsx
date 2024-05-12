@@ -9,6 +9,9 @@ import FormIcon from "@/ui/form/form-icon";
 import SimpleAvatar from "@/ui/avatar/simple-avatar";
 import TextAreas from "@/ui/textareas/textareas";
 import BreadcrumbSimple from "@/ui/breadcrumb/breadcrumb-simple";
+import SimpleSelect from "@/ui/select/simple-select";
+
+
 const components = [
   {
     link: "/alert",
@@ -94,6 +97,17 @@ const components = [
         name: "Breadcrumb simple",
         componentCode: <BreadcrumbSimple />,
       },
+    ],
+  },
+  {
+    link: "/select",
+    name: "Select",
+    style: [
+      {
+        name: "Simple Select",
+        componentCode: <SimpleSelect />,
+      },
+   
     ],
   },
 ];
