@@ -10,7 +10,7 @@ const Footer = () => {
           <p className="font-semibold">NeuBeam</p>
           <ul className="flex gap-5">
             <li className="underline">
-              <Link href={"#"}>contribute</Link>
+              <Link href={"/contribute"}>contribute</Link>
             </li>
             <li className="underline">
               <Link href={"#"}>support</Link>
