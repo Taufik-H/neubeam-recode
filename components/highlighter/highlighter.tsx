@@ -1,18 +1,19 @@
 import React, { Suspense, useEffect, useState } from "react";
-import Prism from "prismjs";
+
 import ButtonHighliter from "./button-highlighter";
-import "prismjs/components/prism-jsx";
+
 import "@/app/customprism.css";
+import { IframeComp } from "../Iframe";
 
 interface HighlighterProps {
-  code?: string;
   language?: string;
   componentName?: string;
+  code: React.ReactNode;
 }
 
 type SizeKey = "mobile" | "sm" | "md" | "lg" | "full";
 
-const Highlighter = ({ code, language, componentName }: HighlighterProps) => {
+const Highlighter = ({ language, componentName, code }: HighlighterProps) => {
   const [showPreview, setShowPreview] = useState(true);
   const [iframeWidth, setIframeWidth] = useState("100%");
   const [loading, setLoading] = useState(true);
@@ -32,14 +33,6 @@ const Highlighter = ({ code, language, componentName }: HighlighterProps) => {
     setIframeWidth(sizes[size] || "100%");
   };
 
-  useEffect(() => {
-    Prism.highlightAll();
-    const iframe = document.querySelector("iframe");
-    if (code) {
-      setLoading(false);
-    }
-  }, [code, language, showPreview]);
-
   return (
     <div>
       <div className="p-4">
@@ -53,7 +46,7 @@ const Highlighter = ({ code, language, componentName }: HighlighterProps) => {
               onToggle={togglePreview}
               isPreviewing={showPreview}
             />
-            <ButtonHighliter mode="copy" code={code} />
+            {/* <ButtonHighliter mode="copy" code={code} /> */}
           </div>
           <ButtonHighliter
             mode="responsiveness"
@@ -66,55 +59,16 @@ const Highlighter = ({ code, language, componentName }: HighlighterProps) => {
           <div>
             {showPreview ? (
               <div className="mt-10 h-[70vh] overflow-hidden rounded-xl border-2 border-b-4 border-r-4 border-slate-800 bg-sky-500 ">
-                {loading ? (
-                  <div className="mt-20 flex items-center justify-center font-bold text-white">
-                    Loading...
-                  </div>
-                ) : (
-                  <iframe
-                    key={code?.toString()}
-                    srcDoc={`
-                          <!doctype html>
-                          <html>
-                          <head>
-                            <meta charset="UTF-8">
-                            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                            <style>
-                           
-                            </style>
-                            <script src="https://cdn.tailwindcss.com"></script>
-                          </head>
-                          <body>
-                            <div class="flex justify-center w-full ">
-                              ${code}
-                            </div>
-                            <script>
-                              document.addEventListener('DOMContentLoaded', function() {
-                                var links = document.querySelectorAll('a');
-                                links.forEach(function(link) {
-                                  link.removeAttribute('href');
-                                  link.addEventListener('click', function(e) {
-                                    e.preventDefault();
-                                  });
-                                });
-                              });
-                            </script>
-                          </body>
-                          </html>
-                        `}
-                    title="Component Preview"
-                    width="100%"
-                    height="100%"
-                    className="w-full border-none"
-                  />
-                )}
+                <IframeComp scripts={["https://cdn.tailwindcss.com"]}>
+                  <div className="flex w-full justify-center ">{code}</div>
+                </IframeComp>
               </div>
             ) : (
               <div className="mt-10">
                 <pre
                   className={`language-${language} h-[70vh] max-h-[70vh] overflow-scroll rounded-xl border-2 border-b-4 border-r-4 border-slate-800`}
                 >
-                  <code className={`language-${language}`}>{`${code}`}</code>
+                  {/* <code className={`language-${language}`}>{`${code}`}</code> */}
                 </pre>
               </div>
             )}
